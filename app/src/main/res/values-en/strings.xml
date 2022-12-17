@@ -2,4 +2,34 @@
 <resources>
     <string name="app_name">BoNote</string>
     <string name="no_data">No Data</string>
+    <string name="to_do_list">ToDo List</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="title">Title</string>
+    <string name="description">Description...</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort By</string>
+    <string name="priority_hight">Priority Hight</string>
+    <string name="priority_low">Priority Low</string>
+    <string name="delete_all">Delete All</string>
+    <string name="language">Language</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+
+    <!-- 优先级string数组 -->
+    <string-array name="priorities">
+        <item>Hight Priority</item>
+        <item>Medium Priority</item>
+        <item>Low Priority</item>
+    </string-array>
+
+    <string name="fill_out_all_fields">Please fill out all fields</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_sure">Are you sure want to remove</string>
+    <string name="successfully_removed">Successfully Removed: %s</string>
+    <string name="successfully_removed_all">Successfully Removed Everything!</string>
+    <string name="are_you_sure_all">Cannot be recovered after deletion. Are you sure want to remove Everything?</string>
+
 </resources>

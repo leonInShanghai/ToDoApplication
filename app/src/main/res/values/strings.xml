@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">波波便签</string>
     <string name="no_data">还没有记录哦!</string>
+    <string name="to_do_list">全部笔记</string>
+    <string name="add">新建</string>
+    <string name="update">更新</string>
+    <string name="title">标题</string>
+    <string name="description">内容...</string>
+    <string name="search">搜索</string>
+    <string name="sort_by">排序方式</string>
+    <string name="priority_hight">优先级高</string>
+    <string name="priority_low">优先级低</string>
+    <string name="delete_all">删除全部</string>
+    <string name="language">语言设置</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="share">分享</string>
+
+    <!-- 优先级string数组 -->
+    <string-array name="priorities">
+        <item>高优先级</item>
+        <item>中优先级</item>
+        <item>低优先级</item>
+    </string-array>
+
+    <string name="fill_out_all_fields">请输入标题和内容</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="are_you_sure">确定要删除</string>
+    <string name="successfully_removed">成功删除: %s</string>
+    <string name="successfully_removed_all">成功删除全部便签！</string>
+    <string name="are_you_sure_all">删除后不可恢复,确定要删除全部便签？</string>
+
 </resources>

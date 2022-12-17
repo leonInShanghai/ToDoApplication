@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/custom_input.xml" value="0.25729166666666664" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/ic_no_data.xml" value="0.25729166666666664" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/item_background.xml" value="0.25729166666666664" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_add.xml" value="0.24114583333333334" />
-        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_list.xml" value="0.25" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_add.xml" value="0.1" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_list.xml" value="0.1" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_update.xml" value="0.1793478260869565" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/row_layout.xml" value="0.1" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/menu/add_fragment_menu.xml" value="0.24114583333333334" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/menu/list_fragment_menu.xml" value="0.24114583333333334" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/menu/sq.xml" value="0.24114583333333334" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/menu/update_fragment_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
