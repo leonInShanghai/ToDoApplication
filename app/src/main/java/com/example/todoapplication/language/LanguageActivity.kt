@@ -61,12 +61,19 @@ class LanguageActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onBackPressed() {
+        // super.onBackPressed()
+        val result = if (mViewModel.isUpdataLanguage()) 1 else 0
+        setResult(result)
+        finish()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
 
-
+    // 测试代码
     fun changeLocaleAccordingOptions() {
         val locale: Locale? = null
         val resources = getResources();//获得res资源对象
