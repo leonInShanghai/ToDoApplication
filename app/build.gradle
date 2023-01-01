@@ -27,13 +27,19 @@ android {
         }
     }
 
+    buildFeatures {
+        dataBinding = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         viewBinding true
     }
@@ -69,7 +75,11 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
-    // RecyclerView Animation
+    // DataBinding
+    kapt 'com.android.databinding:compiler:3.2.0-alpha10'
+
+
+    // RecyclerView Animation implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
     implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
 
     // 新拟物化风格

@@ -30,5 +30,8 @@
     <string name="successfully_removed">成功删除: %s</string>
     <string name="successfully_removed_all">成功删除全部便签！</string>
     <string name="are_you_sure_all">删除后不可恢复,确定要删除全部便签？</string>
+    <string name="undo">撤销</string>
+    <string name="language_setting">语言设置</string>
+    <string name="follow_system">跟随系统</string>
 
 </resources>

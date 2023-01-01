@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/bg_splash.xml" value="0.2421875" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/custom_input.xml" value="0.25729166666666664" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/ic_no_data.xml" value="0.25729166666666664" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/drawable/item_background.xml" value="0.25729166666666664" />
+        <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/activity_language.xml" value="0.1" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_add.xml" value="0.1" />
         <entry key="..\:/androidCode/ToDoApplication/app/src/main/res/layout/fragment_list.xml" value="0.1" />

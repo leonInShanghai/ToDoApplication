@@ -11,6 +11,8 @@ import com.example.todoapplication.data.models.ToDoData
 class ToDoRepository(private val toDoDao: ToDoDao) {
 
     val getAllData: LiveData<List<ToDoData>> = toDoDao.getAllData()
+    val sortByHighPriority: LiveData<List<ToDoData>> = toDoDao.sortByHighPriority()
+    val sortByLowPriority: LiveData<List<ToDoData>> = toDoDao.sortByLowPriority()
 
     /**
      * 插入数据 IGNORE：有旧数据存在，想要插入的数据将会插入失败（默认采用的策略）
@@ -38,5 +40,12 @@ class ToDoRepository(private val toDoDao: ToDoDao) {
      */
     suspend fun deleteAll() {
         toDoDao.deleteAll()
+    }
+
+    /**
+     * 通过标题（和内容）搜索便签
+     */
+    fun searchDatabase(searchQuery: String): LiveData<List<ToDoData>> {
+       return toDoDao.searchDatabase(searchQuery)
     }
 }

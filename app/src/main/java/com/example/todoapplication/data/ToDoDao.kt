@@ -18,7 +18,8 @@ import com.example.todoapplication.data.models.ToDoData
 @Dao
 interface ToDoDao {
 
-    @Query("SELECT * FROM todo_table ORDER BY id ASC")
+    // @Query("SELECT * FROM todo_table ORDER BY id ASC")
+    @Query("SELECT * FROM todo_table ORDER BY time DESC")
     fun getAllData(): LiveData<List<ToDoData>>
 
     /** 插入数据 */
@@ -36,4 +37,17 @@ interface ToDoDao {
     /** 删除所有数据 */
     @Query("DELETE FROM todo_table")
     suspend fun deleteAll()
+
+    /** 通过内容和标题查询笔记按时间排序 */
+    // @Query("SELECT * FROM todo_table where title or description LIKE :searchQuery")
+    // @Query("SELECT * FROM todo_table where title LIKE :searchQuery or description LIKE :searchQuery")
+    @Query("SELECT * FROM todo_table where title LIKE :searchQuery or description " +
+            "LIKE :searchQuery ORDER BY time DESC")
+    fun searchDatabase(searchQuery: String): LiveData<List<ToDoData>>
+
+    @Query(" SELECT * FROM todo_table ORDER BY CASE WHEN priority LIKE 'H%' THEN 1  WHEN priority LIKE 'M%' THEN 2 WHEN priority LIKE 'L%' THEN 3 END")
+    fun sortByHighPriority(): LiveData<List<ToDoData>>
+
+    @Query(" SELECT * FROM todo_table ORDER BY CASE WHEN priority LIKE 'L%' THEN 1  WHEN priority LIKE 'M%' THEN 2 WHEN priority LIKE 'H%' THEN 3 END")
+    fun sortByLowPriority(): LiveData<List<ToDoData>>
 }

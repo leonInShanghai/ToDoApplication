@@ -20,10 +20,14 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
     private val repository : ToDoRepository
 
     val getAllData: LiveData<List<ToDoData>>
+    val sortyByHighPriority: LiveData<List<ToDoData>>
+    val sortyByLowPriority: LiveData<List<ToDoData>>
 
     init {
         repository = ToDoRepository(toDoDao)
         getAllData = repository.getAllData
+        sortyByHighPriority = repository.sortByHighPriority
+        sortyByLowPriority = repository.sortByLowPriority
     }
 
     // 插入一条数据 注意当前采用的模式如果数据已经存在会报错
@@ -52,5 +56,10 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAll()
         }
+    }
+
+    // 搜索笔记
+    fun searchDatabase(searchQuery: String): LiveData<List<ToDoData>>{
+        return repository.searchDatabase(searchQuery)
     }
 }

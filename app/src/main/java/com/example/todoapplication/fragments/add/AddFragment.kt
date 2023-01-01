@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.todoapplication.MainActivity
 import com.example.todoapplication.R
 import com.example.todoapplication.data.models.Priority
 import com.example.todoapplication.data.models.ToDoData
@@ -24,12 +26,19 @@ class AddFragment : Fragment() {
     private val mToDoViewModel: ToDoViewModel by viewModels()
     private val mSharedViewModel: SharedViewModel by viewModels()
 
+    override fun onResume() {
+        super.onResume()
+        val act = activity as MainActivity
+        val actionBar: ActionBar? = act.supportActionBar
+        actionBar!!.title = getString(R.string.add)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        val view =inflater.inflate(R.layout.fragment_add, container, false)
+        val view = inflater.inflate(R.layout.fragment_add, container, false)
 
         // 设置ActionBar右上角的按钮-1
         setHasOptionsMenu(true)
@@ -68,7 +77,8 @@ class AddFragment : Fragment() {
                 0, // 这里的id传0它自己也会自增的
                 mTitle,
                 mSharedViewModel.parsePriority(mPriority),
-                mDescription
+                mDescription,
+                System.currentTimeMillis()
             )
             // 数据库查看工具：https://sqlitebrowser.org/
             mToDoViewModel.instertData(newData)

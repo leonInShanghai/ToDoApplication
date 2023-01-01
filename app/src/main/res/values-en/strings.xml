@@ -31,5 +31,8 @@
     <string name="successfully_removed">Successfully Removed: %s</string>
     <string name="successfully_removed_all">Successfully Removed Everything!</string>
     <string name="are_you_sure_all">Cannot be recovered after deletion. Are you sure want to remove Everything?</string>
+    <string name="undo">Undo</string>
+    <string name="language_setting">Language Settings</string>
+    <string name="follow_system">Follow-up system</string>
 
 </resources>

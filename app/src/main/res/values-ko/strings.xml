@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">뽀뽀 메모</string>
+    <string name="no_data">아직 기록이 없어요!</string>
+    <string name="to_do_list">전체 노트</string>
+    <string name="add">새로 만들기</string>
+    <string name="update">업데이트</string>
+    <string name="title">제목</string>
+    <string name="description">내용...</string>
+    <string name="search">검색</string>
+    <string name="sort_by">정렬 방법</string>
+    <string name="priority_hight">우선 순위가 높음</string>
+    <string name="priority_low">낮은 우선 순위</string>
+    <string name="delete_all">모두 삭제</string>
+    <string name="language">언어 설정</string>
+    <string name="save">저장</string>
+    <string name="delete">삭제</string>
+    <string name="share">공유</string>
+
+    <!-- 优先级string数组 -->
+    <string-array name="priorities">
+        <item>높은 우선 순위</item>
+        <item>보통 우선 순위</item>
+        <item>낮은 우선 순위</item>
+    </string-array>
+
+    <string name="fill_out_all_fields">제목과 내용을 입력하십시오</string>
+    <string name="yes">예</string>
+    <string name="no">아니오</string>
+    <string name="are_you_sure">삭제 결정</string>
+    <string name="successfully_removed">삭제 성공:%s</string>
+    <string name="successfully_removed_all">모든 메모를 삭제했습니다!</string>
+    <string name="are_you_sure_all">삭제 후 복구할 수 없습니다. 모든 메모를 삭제하시겠습니까?</string>
+    <string name="undo">취소</string>
+    <string name="language_setting">언어 설정</string>
+    <string name="follow_system">시스템 따르기</string>
+
+</resources>

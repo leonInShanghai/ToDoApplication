@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!-- 设置背景，解决白屏的关键 -->
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+
     </style>
 </resources>

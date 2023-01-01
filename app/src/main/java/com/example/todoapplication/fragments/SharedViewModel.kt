@@ -18,11 +18,13 @@ import com.example.todoapplication.data.models.ToDoData
  */
 class SharedViewModel(application: Application): AndroidViewModel(application) {
 
-    val emptyDatabase: MutableLiveData<Boolean> = MutableLiveData(true)
+    // region ListFragment
+    val emptyDatabase: MutableLiveData<Boolean> = MutableLiveData(false)
 
     fun checkIfDatabaseEmpty(toDoDatas: List<ToDoData>) {
         emptyDatabase.value = toDoDatas.isEmpty()
     }
+    // endregion ListFtament
 
     // AddFragment 中 spinner 被选择了回调
     val listener: AdapterView.OnItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -48,11 +50,13 @@ class SharedViewModel(application: Application): AndroidViewModel(application) {
 
     // 验证用户输入的信息是否为空
     fun verifyDataFromUser(title: String, description: String): Boolean {
-        return if (TextUtils.isEmpty(title) || TextUtils.isEmpty(description))  {
-            false
-        } else {
-            !(title.isEmpty() || description.isEmpty())
-        }
+//        return if (TextUtils.isEmpty(title) || TextUtils.isEmpty(description))  {
+//            false
+//        } else {
+//            !(title.isEmpty() || description.isEmpty())
+//        }
+
+        return !(title.isEmpty() || description.isEmpty())
     }
 
     // 将用户选择的spinner->String转换为 枚举
@@ -62,27 +66,24 @@ class SharedViewModel(application: Application): AndroidViewModel(application) {
                 Priority.HIGH}
             "高优先级" -> {
                 Priority.HIGH}
+            "높은 우선 순위" -> {
+                Priority.HIGH}
 
             "Medium Priority" -> {
                 Priority.MEDIUM}
             "中优先级" -> {
+                Priority.MEDIUM}
+            "보통 우선 순위" -> {
                 Priority.MEDIUM}
 
             "Low Priority" -> {
                 Priority.LOW}
             "低优先级" -> {
                 Priority.LOW}
+            "낮은 우선 순위" -> {
+                Priority.LOW}
 
             else -> Priority.LOW
-        }
-    }
-
-    // priority转int
-    fun parsePriorityToInt(priority: Priority): Int {
-        return when (priority) {
-            Priority.HIGH -> 0
-            Priority.MEDIUM -> 1
-            Priority.LOW -> 2
         }
     }
 }
